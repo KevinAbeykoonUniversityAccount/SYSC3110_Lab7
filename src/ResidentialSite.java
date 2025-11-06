@@ -1,6 +1,8 @@
 public class ResidentialSite extends Site{
+    int _units = 10;
+    double _rate = 0.19;
 
-    public double getBillableAmount(int _units, int _rate){
+    public double getBillableAmount(){
         double base = _units * _rate;
         double tax = base * Site.TAX_RATE;
         return base + tax;
@@ -12,11 +14,11 @@ public class ResidentialSite extends Site{
 
     @Override
     public double getBaseAmount() {
-        return 0;
+        return _units * _rate;
     }
 
     @Override
     public double getTaxAmount() {
-        return 0;
+        return getBaseAmount() * Site.TAX_RATE;
     }
 }
