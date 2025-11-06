@@ -1,4 +1,6 @@
 public class LifelineSite extends Site{
+    int _units = 12;
+    double _rate = 0.10;
 
     public double getBillableAmount(int _units, int _rate){
         double base = _units * _rate * 0.5;
@@ -12,11 +14,11 @@ public class LifelineSite extends Site{
 
     @Override
     public double getBaseAmount() {
-        return 0;
+        return _units * _rate * 0.5;
     }
 
     @Override
     public double getTaxAmount() {
-        return 0;
+        return getBaseAmount() * Site.TAX_RATE  * 0.2;
     }
 }
