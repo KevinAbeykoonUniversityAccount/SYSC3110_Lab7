@@ -9,4 +9,14 @@ public class LifelineSite extends Site{
     public static void main(String[] args) {
 
     }
+
+    @Override
+    public double getBaseAmount() {
+        return 0;
+    }
+
+    @Override
+    public double getTaxAmount() {
+        return 0;
+    }
 }
