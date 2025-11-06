@@ -1,9 +1,10 @@
 public class LifelineSite extends Site{
-    int _units = 12;
-    double _rate = 0.10;
+    int _units = 100;
+    double _rate = 0.50;
 
     public static void main(String[] args) {
-
+        LifelineSite var = new LifelineSite();
+        System.out.println(var.getBillableAmount());
     }
 
     @Override

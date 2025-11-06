@@ -1,9 +1,10 @@
 public class ResidentialSite extends Site{
     int _units = 10;
-    double _rate = 0.19;
+    double _rate = 0.10;
 
     public static void main(String[] args) {
-
+        ResidentialSite var = new ResidentialSite();
+        System.out.println(var.getBillableAmount());
     }
 
     @Override
